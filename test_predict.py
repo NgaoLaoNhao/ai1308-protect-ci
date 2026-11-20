@@ -7,3 +7,5 @@ def test_confident():
 
 def test_low_confidence():
     assert predict({"cat": 0.4, "dog": 0.35}) == "unknown"
+def test_boundary():
+    assert predict({"cat": 0.5, "dog": 0.1}) == "cat"
